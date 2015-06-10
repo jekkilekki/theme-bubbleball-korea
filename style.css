@@ -1,0 +1,46 @@
+/*
+ * Theme name:  BubbleBall Korea
+ * Theme URI:   http://www.jekkilekki.com
+ * Description: Child Theme of the AccessPress Parallax built for BubbleBall Korea.
+ * Author:      Aaron Snowberger
+ * Author URI:  http://www.jekkilekki.com
+ * Template:    accesspress-parallax
+ * Version:     0.1
+ * License:     GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Tags:        light, dark, responsive-layout, translation-ready, one-column, custom-colors, custom-menu, featured-images, sticky-post, theme-options
+ * Text Domain: bubbleball-korea
+ */
+
+@import url('../accesspress-parallax/style.css');
+
+.bubbleball-header {
+    height: 50px;
+    position: relative;
+}
+.mltlngg_switcher {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.social-icons {
+    position: absolute;
+    /*right: 120px;*/
+    top: 20px;
+    margin: 0;
+    left: 50%;
+    width: auto;
+}
+.social-icons a span {
+    top: 35px;
+    margin: 0;
+}
+.social-icons a span:after {
+    border-color: transparent transparent #333 transparent;
+    margin-left: -4px;
+    left: 50%;
+    margin-top: -14px;
+}
+.social-icons a:hover span {
+    left: 0;
+}
