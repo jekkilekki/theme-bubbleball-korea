@@ -26,10 +26,8 @@
 <div id="page" class="hfeed site">
 	<header id="masthead" class="<?php echo of_get_option('header_layout'); ?>">
             <div class="mid-content bubbleball-header">
-                <?php 
-		if(of_get_option('show_social') == 1):
-			do_action('accesspress_social');
-		endif; ?>
+                
+                <?php get_template_part( 'menu', 'social' ); ?>
                 
                 <?php if ( function_exists( 'mltlngg_display_switcher' ) ) mltlngg_display_switcher(); ?>
             </div>
@@ -83,7 +81,9 @@
 		
 		</nav><!-- #site-navigation -->
 		</div>
-            
+            <?php if(of_get_option('show_social') == 1) {
+			do_action('accesspress_social');
+            } ?>
 	</header><!-- #masthead -->
 
 	<?php 
@@ -96,6 +96,6 @@
 	<div id="content" class="site-content <?php echo $content_class; ?>">
 	<?php 
 	if(is_home() || is_front_page()) :
-		do_action('accesspress_bxslider'); 
+		do_action('bubbleball_bxslider'); 
 	endif;
 	?>
