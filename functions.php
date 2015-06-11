@@ -22,6 +22,7 @@ require get_stylesheet_directory() . '/inc/options-framework/bubbleball-function
  * Enqueue Scripts and Styles
  */
 function bubbleball_scripts() {
-    wp_enqueue_script( 'bubbleball_youtube_lightbox', get_stylesheet_directory_uri() . '/js/videoLightning.js', array('jquery'), '20150611', true );
+    wp_enqueue_script( 'bubbleball_videoLightning', get_stylesheet_directory_uri() . '/js/videoLightning.js', array('jquery'), '20150611', true );
+    wp_enqueue_script( 'bubbleball_youtube_lightbox', get_stylesheet_directory_uri() . '/js/youtube-lightbox.js', array('bubbleball_videoLightning'), '20150611', true );
 }
 add_action( 'wp_enqueue_scripts', 'bubbleball_scripts' );

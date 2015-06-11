@@ -120,7 +120,7 @@ function bubbleball_bxslidercb(){
                                                     <h1 class="caption-title"><?php _e('The Greatest Game Ever Played!','bubbleball-korea'); ?></h1>
                                                     <h2 class="caption-description">
                                                     <p><?php _e('','bubbleball-korea'); ?></p>
-                                                    <p class="video-link" data-video-id="f92yfPFl9NY"><a class="video-link" data-video-id="f92yfPFl9NY" href="#"><?php _e('Watch video','bubbleball-korea'); ?></a></p>
+                                                    <p><a class="video-link video-target" data-video-id="y-f92yfPFl9NY" href="#"><?php _e('Watch video','bubbleball-korea'); ?></a></p>
                                                     </h2>
                                             </div>
                                     </div>
@@ -154,16 +154,7 @@ function bubbleball_bxslidercb(){
 			<?php  endif; ?>
 		</section>
 <script>
-  videoLightning({
-    elements: [
-      {
-        ".video-link": {
-          autoplay: true,
-          color: "white"
-        }
-      }
-    ]
-  });
+    videoLightning({settings: {autoplay: true, color: "white"}, element: ".video-link"});
 </script>
 		<?php endif; ?>
 <?php

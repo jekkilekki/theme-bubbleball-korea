@@ -23,6 +23,9 @@
     right: 0;
     top: 10px;
 }
+.overlay:first-child {
+    display: none;
+}
 
 /* == SOCIAL MENU =========================================================== */
 
