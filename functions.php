@@ -16,7 +16,7 @@ add_action( 'init', 'bubbleball_register_menus' );
 /**
  * Load Custom Slider file.
  */
-require get_stylesheet_directory() . '/inc/options-framework/bubbleball-functions.php';
+require get_stylesheet_directory() . '/bubbleball-functions.php';
 
 /**
  * Enqueue Scripts and Styles

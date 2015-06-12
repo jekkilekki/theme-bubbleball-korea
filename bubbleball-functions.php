@@ -45,7 +45,8 @@ function bubbleball_bxslidercb(){
 					pager: <?php echo $accesspress_show_pager; ?>,
 					controls: <?php echo $accesspress_show_controls; ?>,
 					mode: '<?php echo $accesspress_slider_transition; ?>',
-					auto : '<?php echo $accesspress_auto_transition; ?>',
+					// auto : '<?php // echo $accesspress_auto_transition; ?>', // Original code
+                                        auto: 'false', // Try to turn off auto 
 					pause: '<?php echo $accesspress_slider_pause; ?>',
 					speed: '<?php echo $accesspress_slider_speed; ?>'
 				});
@@ -57,6 +58,10 @@ function bubbleball_bxslidercb(){
 					$('#main-slider .bx-viewport , #main-slider .slides').height(winHeight-headerHeight);
 				}).resize();
 				<?php endif; ?>
+                                
+                                // Supposed to pop up the Video Lightbox, but not working yet...
+                                // Pops up, but video is not working...
+                                $(".video-link").nivoLightbox();
 				
 			});
         </script>
@@ -74,11 +79,11 @@ function bubbleball_bxslidercb(){
                                                 <iframe src="https://www.youtube.com/embed/f92yfPFl9NY" frameborder="0" allowfullscreen></iframe>
                                                 <div class="slider-caption">
                                                         <div class="mid-content">
-                                                                <h1 class="caption-title"><?php _e('The Greatest Game Ever Played!','accesspress_parallax'); ?></h1>
-                                                                <h2 class="caption-description">
-                                                                <p><?php _e('A full featured parallax theme - and its absolutely free!','accesspress_parallax'); ?></p>
-                                                                <p><a href="#"><?php _e('Read More','accesspress_parallax'); ?></a></p>
-                                                                </h2>
+                                                                <h1 class="video-link caption-title"><?php _e('The Greatest Game Ever Played!','bubbleball-korea'); ?></h1>
+                                                                <!--<h2 class="video-link caption-description">
+                                                                <p><?php //_e('','bubbleball-korea'); ?></p>
+                                                                <p><a class="video-link" href="https://www.youtube.com/embed/f92yfPFl9NY"><?php _e('Watch video','bubbleball-korea'); ?></a></p>
+                                                                </h2>-->
                                                         </div>
                                                 </div>
                                             </div>
@@ -118,10 +123,10 @@ function bubbleball_bxslidercb(){
                                     <div class="slider-caption">
                                             <div class="mid-content">
                                                     <h1 class="caption-title"><?php _e('The Greatest Game Ever Played!','bubbleball-korea'); ?></h1>
-                                                    <h2 class="caption-description">
-                                                    <p><?php _e('','bubbleball-korea'); ?></p>
-                                                    <p><a class="video-link video-target" data-video-id="y-f92yfPFl9NY" href="#"><?php _e('Watch video','bubbleball-korea'); ?></a></p>
-                                                    </h2>
+                                                    <!--<h2 class="caption-description">
+                                                    <p><?php //_e('','bubbleball-korea'); ?></p>
+                                                    <p><a class="video-link" href="https://www.youtube.com/embed/f92yfPFl9NY"><?php _e('Watch video','bubbleball-korea'); ?></a></p>
+                                                    </h2>-->
                                             </div>
                                     </div>
                                 </div>
@@ -153,9 +158,6 @@ function bubbleball_bxslidercb(){
 			</div>
 			<?php  endif; ?>
 		</section>
-<script>
-    videoLightning({settings: {autoplay: true, color: "white"}, element: ".video-link"});
-</script>
 		<?php endif; ?>
 <?php
 }

@@ -14,6 +14,59 @@
 
 @import url('../accesspress-parallax/style.css');
 
+/* == COLOR RESET =========================================================== */
+a,
+.main-navigation > ul > li.current a,
+.main-navigation li:hover > a,
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.blog-list .blog-excerpt .posted-date {
+    color: red;
+}
+.social-icons a:hover,
+#go-top,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.posted-on,
+.portfolio-list .portfolio-overlay span,
+.blog-list .blog-excerpt span,
+a.bx-pager-link.active,
+.bx-wrapper .bx-pager.bx-default-pager a:hover, 
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background-color: red;
+}
+#masthead,
+.page-header,
+.blog-list .blog-excerpt {
+    border-bottom: 3px solid red;
+}
+#secondary h2.widget-title {
+	border-bottom: 1px solid red;
+}
+.testimonial-listing .bx-wrapper .bx-controls-direction a:hover {
+    background: red;
+    border: 1px solid red;
+}
+/*.team-image.active:after {
+    border-color: red transparent transparent;
+}*/
+.team-image:hover, .team-image.active {
+	border: 2px solid red;
+}
+.slider-caption .caption-description a:hover,
+.parallax-section .btn:hover,
+.btn:hover {
+    background: red!important;
+    border-color: red!important;
+}
+
+/* == MAIN PAGE ============================================================= */
+.home #main-slider {
+    
+}
+
 .bubbleball-header {
     height: 40px;
     position: relative;
@@ -23,12 +76,11 @@
     right: 0;
     top: 10px;
 }
-.overlay:first-child {
+#main-slider .overlay {
     display: none;
 }
 
 /* == SOCIAL MENU =========================================================== */
-
 .bubbleball-header .social-icons {
     position: absolute;
     top: 8px;
